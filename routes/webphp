@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
 
 
 
@@ -19,7 +20,7 @@ Route::get('/csrf-token', function () {
 });
 
 
-Route::post('/login', [AuthController::class, 'login']);
+//Route::post('/login', [AuthController::class, 'login']);
 
 /*Route::get ('/user_index',[UserController::class,'index']);
 
@@ -42,7 +43,7 @@ Route::put('/user_update/{id}',[UserController::class,'update']);
 
 Route::post('/user_create',[UserController::class,'store']);*/
 
-
+/*
 Route::group(['prefix' => 'users'], function () {
     Route::get('/', [UserController::class, 'index']);
     Route::get('/directivo', [UserController::class, 'index_directivo']);
@@ -52,4 +53,8 @@ Route::group(['prefix' => 'users'], function () {
     Route::delete('/{id}', [UserController::class, 'destroy']);
     Route::put('/{id}', [UserController::class, 'update']);
     Route::post('/create_user', [UserController::class, 'store']);
-});
+});*/
+
+
+Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/posts', [PostController::class, 'index']);

@@ -50,19 +50,25 @@ class UserFactory extends Factory
     }
     public function crearAtleta(): static
     {
+        $categorias = ['infantil', 'cadete', 'juveni', 'sub23', 'elite', 'master'];  
+
+
         return $this->state(fn (array $attributes) => [
             'rol' => 'atleta',
             'peso'=>fake()->randomFloat(2, 60, 100),
             'altura'=>fake()->randomFloat(2, 1.5, 2),
+            'categoria' => $categorias[array_rand($categorias)],
         ]);
     }
     
     public function crearEntrenador(): static
     {
+        $categorias = ['infantil', 'cadete', 'juveni', 'sub23', 'elite', 'master'];  
         return $this->state(fn (array $attributes) => [
             'rol' =>'entrenador',
             'peso'=>null,
             'altura'=>null,
+            'categoria' => $categorias[array_rand($categorias)],
         ]);
     }
 }

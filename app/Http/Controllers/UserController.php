@@ -10,6 +10,15 @@ use Illuminate\Http\JsonResponse;
 
 class UserController
 {
+
+
+    public function index()
+    {
+        // Supongamos que estás obteniendo todos los usuarios
+        $users = User::all();
+        return response()->json($users);
+    }
+
     public function get_user_by_id($id)
     {
         // Asegurémonos de que $id sea un entero antes de continuar

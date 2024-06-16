@@ -1,20 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Validator;
-
 
 use App\Models\User;
-use Laravel\Sanctum\HasApiTokens;
-use Illuminate\Validation\ValidationException;
+use Illuminate\Http\Request;
 
-class AuthController extends Controller
+class AuthController
 {
-
-
-   /*
+  /**
      * Verifica las credenciales del usuario sin hashear la contraseña.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +28,5 @@ class AuthController extends Controller
         // Autenticación fallida
         return response()->json(['respuesta' => 'Credenciales inválidas']);
     }
-
+    
 }
-
-

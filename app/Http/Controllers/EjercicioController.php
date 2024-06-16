@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\entrenamiento;
-use App\Http\Requests\StoreentrenamientoRequest;
-use App\Http\Requests\UpdateentrenamientoRequest;
+use App\Models\Ejercicio;
+use Illuminate\Http\Request;
 
-class EntrenamientoController 
+class EjercicioController
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +26,7 @@ class EntrenamientoController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreentrenamientoRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -35,7 +34,7 @@ class EntrenamientoController
     /**
      * Display the specified resource.
      */
-    public function show(entrenamiento $entrenamiento)
+    public function show(Ejercicio $ejercicio)
     {
         //
     }
@@ -43,7 +42,7 @@ class EntrenamientoController
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(entrenamiento $entrenamiento)
+    public function edit(Ejercicio $ejercicio)
     {
         //
     }
@@ -51,7 +50,7 @@ class EntrenamientoController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateentrenamientoRequest $request, entrenamiento $entrenamiento)
+    public function update(Request $request, Ejercicio $ejercicio)
     {
         //
     }
@@ -59,7 +58,7 @@ class EntrenamientoController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(entrenamiento $entrenamiento)
+    public function destroy(Ejercicio $ejercicio)
     {
         //
     }
