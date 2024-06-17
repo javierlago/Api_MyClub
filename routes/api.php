@@ -29,4 +29,6 @@ Route :: prefix('posts')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::get('/directivo', [PostController::class, 'indexWithoutExercises']);
     Route::get('/{id}', [PostController::class, 'show']);
+    Route::post('/create_post', [PostController::class, 'store']);
+    Route::post('/create_training', [PostController::class, 'storeWithExercises']);
 });

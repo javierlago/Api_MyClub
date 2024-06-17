@@ -12,7 +12,12 @@ class Ejercicio extends Model
     protected $table = 'ejercicio';
 
     protected $fillable = [
-        'postId', 'nombre', 'descripcionUnidades', 'intensidad', 'serie', 'unidades',
+        'nombre',
+        'postId',
+        'descripcionUnidades',
+        'intensidad',
+        'serie',
+        'unidades',
     ];
 
     // Relación inversa con Post
